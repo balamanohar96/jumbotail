@@ -2,9 +2,9 @@ const connectDb = require("./DBconfiguration/database");
 const express = require("express");
 const app = express();
 app.use(express.json());
-const sendDataToDbRouter = require("./routes/sendDataToDb");
-const nearestWarehouseRouter = require("./routes/nearestWarehouse");
-const shippingChargeRouter = require("./routes/shippingCharge");
+const sendDataToDbRouter = require("./routes/sendDataToDbAPI");
+const nearestWarehouseRouter = require("./routes/nearestWarehouseAPI");
+const shippingChargeRouter = require("./routes/shippingChargeAPI");
 
 app.use("/", sendDataToDbRouter);
 app.use("/", nearestWarehouseRouter);
